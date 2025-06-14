@@ -1,10 +1,10 @@
 name: spam_model_retrain
 
-conda_env: MLProject/conda.yaml
+conda_env: conda.yaml  # ✅ cukup begini saja
 
 entry_points:
   main:
     parameters:
-      data_path: {type: str, default: MLProject/emails_preprocessed.csv}
+      data_path: {type: str, default: emails_preprocessed.csv}
     command: >
-      python MLProject/modelling.py --data_path {data_path}
+      python modelling.py --data_path {data_path}
