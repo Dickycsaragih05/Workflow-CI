@@ -2,12 +2,11 @@ FROM python:3.10-slim
 
 WORKDIR /opt/mlflow
 
-COPY model /opt/ml/model
+COPY model_artifact /opt/ml/model
 
 RUN pip install --upgrade pip && \
-    pip install mlflow==3.1.0 && \
-    python -c "from mlflow.models import container as C; C._install_pyfunc_deps('/opt/ml/model', install_mlflow=False, env_manager='local')"
+    pip install mlflow==3.1.0
 
 EXPOSE 5000
 
-CMD mlflow models serve -m /opt/ml/model -h 0.0.0.0 -p 5000 --env-manager=local
+CMD ["mlflow", "models", "serve", "-m", "/opt/ml/model", "-h", "0.0.0.0", "-p", "5000", "--env-manager=local"]
