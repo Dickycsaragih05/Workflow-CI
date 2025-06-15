@@ -1,6 +1,6 @@
 name: spam_model_retrain
 
-conda_env: conda.yaml  # ✅ cukup begini saja
+conda_env: conda.yaml
 
 entry_points:
   main:
