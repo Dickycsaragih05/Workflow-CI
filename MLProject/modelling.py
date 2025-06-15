@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--data_path", type=str, default="emails_preprocessed.csv")
-args = parser.parse_args([]) # Pass an empty list to ignore Colab's arguments
+args = parser.parse_args()
 
 df = pd.read_csv(args.data_path)
 X = df.drop(columns="Prediction")
@@ -16,18 +16,11 @@ y = df["Prediction"]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
-mlflow.autolog()  # ✅ Tidak pakai start_run
+with mlflow.start_run():
+    model = LogisticRegression()
+    model.fit(X_train, y_train)
 
-model = LogisticRegression()
-model.fit(X_train, y_train)
+    acc = accuracy_score(y_test, model.predict(X_test))
+    print(f"Accuracy: {acc:.4f}")
 
-acc = accuracy_score(y_test, model.predict(X_test))
-print(f"✅ Accuracy: {acc:.4f}")
-
-import joblib
-import os
-
-# Simpan model
-os.makedirs("outputs", exist_ok=True)
-joblib.dump(model, "outputs/model.pkl")
-print("✅ Model saved to outputs/model.pkl")
+    mlflow.sklearn.log_model(model, "model", registered_model_name="spam-model")
