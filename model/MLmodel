@@ -1,0 +1,158 @@
+artifact_path: file:///content/mlruns/0/models/m-fa6f9cf741c448c68f1bd4edd382b4c0/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.13
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 3.1.0
+model_id: m-fa6f9cf741c448c68f1bd4edd382b4c0
+model_size_bytes: 3496
+model_uuid: m-fa6f9cf741c448c68f1bd4edd382b4c0
+prompts: null
+run_id: 94a8dfeeb3c24ba8adb41dcc160d611d
+signature:
+  inputs: '[{"type": "double", "name": "e", "required": true}, {"type": "double",
+    "name": "t", "required": true}, {"type": "double", "name": "a", "required": true},
+    {"type": "double", "name": "o", "required": true}, {"type": "double", "name":
+    "n", "required": true}, {"type": "double", "name": "i", "required": true}, {"type":
+    "double", "name": "r", "required": true}, {"type": "double", "name": "s", "required":
+    true}, {"type": "double", "name": "l", "required": true}, {"type": "double", "name":
+    "c", "required": true}, {"type": "double", "name": "h", "required": true}, {"type":
+    "double", "name": "d", "required": true}, {"type": "double", "name": "u", "required":
+    true}, {"type": "double", "name": "m", "required": true}, {"type": "double", "name":
+    "p", "required": true}, {"type": "double", "name": "f", "required": true}, {"type":
+    "double", "name": "y", "required": true}, {"type": "double", "name": "g", "required":
+    true}, {"type": "double", "name": "b", "required": true}, {"type": "double", "name":
+    "th", "required": true}, {"type": "double", "name": "w", "required": true}, {"type":
+    "double", "name": "on", "required": true}, {"type": "double", "name": "in", "required":
+    true}, {"type": "double", "name": "an", "required": true}, {"type": "double",
+    "name": "he", "required": true}, {"type": "double", "name": "re", "required":
+    true}, {"type": "double", "name": "v", "required": true}, {"type": "double", "name":
+    "or", "required": true}, {"type": "double", "name": "en", "required": true}, {"type":
+    "double", "name": "at", "required": true}, {"type": "double", "name": "ct", "required":
+    true}, {"type": "double", "name": "the", "required": true}, {"type": "double",
+    "name": "k", "required": true}, {"type": "double", "name": "to", "required": true},
+    {"type": "double", "name": "ti", "required": true}, {"type": "double", "name":
+    "al", "required": true}, {"type": "double", "name": "co", "required": true}, {"type":
+    "double", "name": "is", "required": true}, {"type": "double", "name": "me", "required":
+    true}, {"type": "double", "name": "ect", "required": true}, {"type": "double",
+    "name": "ed", "required": true}, {"type": "double", "name": "st", "required":
+    true}, {"type": "double", "name": "as", "required": true}, {"type": "double",
+    "name": "nd", "required": true}, {"type": "double", "name": "le", "required":
+    true}, {"type": "double", "name": "se", "required": true}, {"type": "double",
+    "name": "it", "required": true}, {"type": "double", "name": "de", "required":
+    true}, {"type": "double", "name": "ve", "required": true}, {"type": "double",
+    "name": "ll", "required": true}, {"type": "double", "name": "ea", "required":
+    true}, {"type": "double", "name": "j", "required": true}, {"type": "double", "name":
+    "ma", "required": true}, {"type": "double", "name": "et", "required": true}, {"type":
+    "double", "name": "ce", "required": true}, {"type": "double", "name": "ic", "required":
+    true}, {"type": "double", "name": "be", "required": true}, {"type": "double",
+    "name": "ur", "required": true}, {"type": "double", "name": "for", "required":
+    true}, {"type": "double", "name": "and", "required": true}, {"type": "double",
+    "name": "no", "required": true}, {"type": "double", "name": "hi", "required":
+    true}, {"type": "double", "name": "el", "required": true}, {"type": "double",
+    "name": "ac", "required": true}, {"type": "double", "name": "x", "required": true},
+    {"type": "double", "name": "ca", "required": true}, {"type": "double", "name":
+    "of", "required": true}, {"type": "double", "name": "wi", "required": true}, {"type":
+    "double", "name": "you", "required": true}, {"type": "double", "name": "na", "required":
+    true}, {"type": "double", "name": "la", "required": true}, {"type": "double",
+    "name": "us", "required": true}, {"type": "double", "name": "da", "required":
+    true}, {"type": "double", "name": "tr", "required": true}, {"type": "double",
+    "name": "hou", "required": true}, {"type": "double", "name": "pa", "required":
+    true}, {"type": "double", "name": "em", "required": true}, {"type": "double",
+    "name": "we", "required": true}, {"type": "double", "name": "am", "required":
+    true}, {"type": "double", "name": "ad", "required": true}, {"type": "double",
+    "name": "so", "required": true}, {"type": "double", "name": "mi", "required":
+    true}, {"type": "double", "name": "com", "required": true}, {"type": "double",
+    "name": "un", "required": true}, {"type": "double", "name": "ut", "required":
+    true}, {"type": "double", "name": "sa", "required": true}, {"type": "double",
+    "name": "mo", "required": true}, {"type": "double", "name": "po", "required":
+    true}, {"type": "double", "name": "our", "required": true}, {"type": "double",
+    "name": "ga", "required": true}, {"type": "double", "name": "his", "required":
+    true}, {"type": "double", "name": "id", "required": true}, {"type": "double",
+    "name": "her", "required": true}, {"type": "double", "name": "are", "required":
+    true}, {"type": "double", "name": "this", "required": true}, {"type": "double",
+    "name": "rd", "required": true}, {"type": "double", "name": "ex", "required":
+    true}, {"type": "double", "name": "enron", "required": true}, {"type": "double",
+    "name": "iv", "required": true}, {"type": "double", "name": "all", "required":
+    true}, {"type": "double", "name": "pro", "required": true}, {"type": "double",
+    "name": "do", "required": true}, {"type": "double", "name": "ls", "required":
+    true}, {"type": "double", "name": "im", "required": true}, {"type": "double",
+    "name": "tu", "required": true}, {"type": "double", "name": "if", "required":
+    true}, {"type": "double", "name": "rm", "required": true}, {"type": "double",
+    "name": "q", "required": true}, {"type": "double", "name": "z", "required": true},
+    {"type": "double", "name": "men", "required": true}, {"type": "double", "name":
+    "est", "required": true}, {"type": "double", "name": "sp", "required": true},
+    {"type": "double", "name": "oo", "required": true}, {"type": "double", "name":
+    "act", "required": true}, {"type": "double", "name": "with", "required": true},
+    {"type": "double", "name": "mb", "required": true}, {"type": "double", "name":
+    "gr", "required": true}, {"type": "double", "name": "cc", "required": true}, {"type":
+    "double", "name": "ei", "required": true}, {"type": "double", "name": "rom", "required":
+    true}, {"type": "double", "name": "that", "required": true}, {"type": "double",
+    "name": "ff", "required": true}, {"type": "double", "name": "wil", "required":
+    true}, {"type": "double", "name": "ail", "required": true}, {"type": "double",
+    "name": "will", "required": true}, {"type": "double", "name": "not", "required":
+    true}, {"type": "double", "name": "br", "required": true}, {"type": "double",
+    "name": "up", "required": true}, {"type": "double", "name": "rr", "required":
+    true}, {"type": "double", "name": "your", "required": true}, {"type": "double",
+    "name": "from", "required": true}, {"type": "double", "name": "have", "required":
+    true}, {"type": "double", "name": "pi", "required": true}, {"type": "double",
+    "name": "rc", "required": true}, {"type": "double", "name": "any", "required":
+    true}, {"type": "double", "name": "one", "required": true}, {"type": "double",
+    "name": "age", "required": true}, {"type": "double", "name": "per", "required":
+    true}, {"type": "double", "name": "deal", "required": true}, {"type": "double",
+    "name": "day", "required": true}, {"type": "double", "name": "mm", "required":
+    true}, {"type": "double", "name": "ua", "required": true}, {"type": "double",
+    "name": "hp", "required": true}, {"type": "double", "name": "lease", "required":
+    true}, {"type": "double", "name": "der", "required": true}, {"type": "double",
+    "name": "met", "required": true}, {"type": "double", "name": "by", "required":
+    true}, {"type": "double", "name": "out", "required": true}, {"type": "double",
+    "name": "hpl", "required": true}, {"type": "double", "name": "go", "required":
+    true}, {"type": "double", "name": "please", "required": true}, {"type": "double",
+    "name": "mar", "required": true}, {"type": "double", "name": "low", "required":
+    true}, {"type": "double", "name": "war", "required": true}, {"type": "double",
+    "name": "man", "required": true}, {"type": "double", "name": "gas", "required":
+    true}, {"type": "double", "name": "art", "required": true}, {"type": "double",
+    "name": "here", "required": true}, {"type": "double", "name": "can", "required":
+    true}, {"type": "double", "name": "ces", "required": true}, {"type": "double",
+    "name": "oi", "required": true}, {"type": "double", "name": "min", "required":
+    true}, {"type": "double", "name": "than", "required": true}, {"type": "double",
+    "name": "red", "required": true}, {"type": "double", "name": "subject", "required":
+    true}, {"type": "double", "name": "mai", "required": true}, {"type": "double",
+    "name": "pm", "required": true}, {"type": "double", "name": "ten", "required":
+    true}, {"type": "double", "name": "pt", "required": true}, {"type": "double",
+    "name": "meter", "required": true}, {"type": "double", "name": "end", "required":
+    true}, {"type": "double", "name": "now", "required": true}, {"type": "double",
+    "name": "nat", "required": true}, {"type": "double", "name": "nom", "required":
+    true}, {"type": "double", "name": "dr", "required": true}, {"type": "double",
+    "name": "pre", "required": true}, {"type": "double", "name": "cal", "required":
+    true}, {"type": "double", "name": "ok", "required": true}, {"type": "double",
+    "name": "port", "required": true}, {"type": "double", "name": "has", "required":
+    true}, {"type": "double", "name": "sit", "required": true}, {"type": "double",
+    "name": "ward", "required": true}, {"type": "double", "name": "let", "required":
+    true}, {"type": "double", "name": "inc", "required": true}, {"type": "double",
+    "name": "mail", "required": true}, {"type": "double", "name": "fl", "required":
+    true}, {"type": "double", "name": "thank", "required": true}, {"type": "double",
+    "name": "eb", "required": true}, {"type": "double", "name": "pec", "required":
+    true}, {"type": "double", "name": "aren", "required": true}, {"type": "double",
+    "name": "form", "required": true}, {"type": "double", "name": "ft", "required":
+    true}, {"type": "double", "name": "hanks", "required": true}, {"type": "double",
+    "name": "xp", "required": true}, {"type": "double", "name": "corp", "required":
+    true}, {"type": "double", "name": "ali", "required": true}, {"type": "double",
+    "name": "need", "required": true}, {"type": "double", "name": "son", "required":
+    true}, {"type": "double", "name": "att", "required": true}, {"type": "double",
+    "name": "new", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-06-15 15:13:12.358880'
