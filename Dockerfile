@@ -1,14 +1,16 @@
-# Gunakan Python image ringan
+# MLProject/Dockerfile
 FROM python:3.10-slim
 
-# Set working directory
-WORKDIR /app
+WORKDIR /opt/mlflow
 
-# Salin isi folder model
-COPY MLProject/outputs/model.pkl /opt/ml/model/model.pkl
+# Install dependencies
+COPY conda.yaml .
+RUN pip install --upgrade pip && \
+    pip install mlflow && \
+    pip install -r <(grep -A 1000 "dependencies:" conda.yaml | tail -n +2 | grep -v "dependencies:" | sed 's/- //g')
 
-# Install MLflow dan dependencies
-RUN pip install mlflow==3.1.0 scikit-learn pandas joblib
+# Copy model artifact (nanti akan dibuat di step GitHub Actions)
+COPY model /opt/ml/model
 
-# Jalankan MLflow model serving
-ENTRYPOINT ["mlflow", "models", "serve", "-m", "/opt/ml/model", "-h", "0.0.0.0", "-p", "5000", "--env-manager=local"]
+# Set default command
+CMD ["mlflow", "models", "serve", "-m", "/opt/ml/model", "-h", "0.0.0.0", "-p", "5000", "--env-manager=local"]
